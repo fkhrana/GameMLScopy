@@ -90,6 +90,8 @@ public class CalendarManager_New : MonoBehaviour
 
             spawnedDays.Add(newCell);
         }
+        if (meetingManager != null)
+            RefreshDots();
     }
 
     void ChangeMonth(int delta)

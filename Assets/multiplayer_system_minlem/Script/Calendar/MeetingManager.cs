@@ -154,6 +154,7 @@ public class MeetingManager : MonoBehaviour
             DateTime parsedDate;
             if (DateTime.TryParseExact(dateInput.text, "dd/MM/yyyy", CultureInfo.InvariantCulture, DateTimeStyles.None, out parsedDate))
             {
+                parsedDate = parsedDate.Date; // normalisasi: pastikan jam = 00:00:00
                 if (!meetingDates.Exists(d => d.Date == parsedDate.Date))
                     meetingDates.Add(parsedDate);
             }
