@@ -125,7 +125,6 @@ namespace Photon.Realtime
                 {
                     this.Client.Disconnect(DisconnectCause.ApplicationQuit);
                     this.Client.LoadBalancingPeer.StopThread();
-                    this.Client.LoadBalancingPeer.IsSimulationEnabled = false;  // works around a problem with closing the Network Sim Thread in some Unity 6 builds
                 }
 
                 SupportClass.StopAllBackgroundCalls();
